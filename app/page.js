@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import Feed from "@components/Feed";
 
 const Home = () => {
   return <div>

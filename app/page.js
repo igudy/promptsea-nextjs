@@ -13,6 +13,7 @@ const Home = () => {
       </p>
 
       {/* Feed */}
+      <Feed />
     </section>
   </div>
 }

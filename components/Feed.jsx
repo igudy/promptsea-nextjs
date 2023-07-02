@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react"
 import PromptCard from "./PromptCard"
+import ChatBot from "./ChatBot"
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
@@ -85,6 +86,8 @@ const Feed = () => {
       ) : (
         <PromptCardList data={allPosts} handleTagClick={handleTagClick} />
       )}
+
+      <ChatBot />
     </section>
   )
 }

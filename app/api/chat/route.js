@@ -11,7 +11,7 @@ export default async function handler(req, res) {
       messages: [{ role: 'system', content: 'You are a user' }, { role: 'user', content: message }],
     }, {
       headers: {
-        'Authorization': `Bearer YOUR_OPENAI_API_KEY`,
+        'Authorization': `Bearer ${process.env.OPEN_API_API_KEY}`,
         'Content-Type': 'application/json',
       },
     });

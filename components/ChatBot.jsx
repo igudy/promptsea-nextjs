@@ -1,4 +1,5 @@
 // components/Chatbot.js
+import Image from "next/image"
 import { useState } from "react"
 
 const Chatbot = () => {
@@ -35,8 +36,16 @@ const Chatbot = () => {
     <div className={`chatbot ${isOpen ? "open" : ""}`}>
       <div className="chatbot-container">
         <div className="chat-header">
-          <h3>Chatbot</h3>
-          <button onClick={handleToggleChatbot}>
+          <Image
+            src={"/assets/icons/chatgpt-icon.svg"}
+            width={30}
+            height={30}
+          />
+          <h3 className="font-satoshi font-bold">Chat GPT</h3>
+          <button
+            onClick={handleToggleChatbot}
+            className="font-satoshi font-medium"
+          >
             {isOpen ? "Close" : "Open"}
           </button>
         </div>

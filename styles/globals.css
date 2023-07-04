@@ -172,11 +172,11 @@
 /* Chatbot css */
 /* tailwind.css */
 .chatbot {
-  @apply fixed bottom-10 w-48 bg-white rounded-lg h-16 shadow-md transition-transform duration-300 transform translate-x-full;
+  @apply fixed bottom-10 w-[7rem] bg-white rounded-lg h-[4rem] shadow-md;
 }
 
 .chatbot.open {
-  transform: translateX(0%);
+  /* transform: translateY(0%); */
 }
 
 .chatbot-container {
@@ -209,17 +209,17 @@
   background-color: #e2f5fe;
 }
 
-.input-container {
+/* .input-container {
   display: flex;
-  margin-top: 10px;
-}
+  margin-top: -115px;
+} */
 
-.input-container input {
+/* .input-container input {
   flex: 1;
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
-}
+} */
 
 .input-container button {
   padding: 8px 16px;

@@ -41,12 +41,30 @@ const Chatbot = () => {
             width={30}
             height={30}
           />
-          <h3 className="font-satoshi font-bold">Chat GPT</h3>
           <button
             onClick={handleToggleChatbot}
             className="font-satoshi font-medium"
           >
-            {isOpen ? "Close" : "Open"}
+            {/* <h3 className="font-satoshi font-bold">Chat GPT</h3> */}
+            {isOpen ? (
+              <>
+                {/* Close */}
+                <Image
+                  src={"/assets/icons/icons8-close.svg"}
+                  width={20}
+                  height={20}
+                />
+              </>
+            ) : (
+              <>
+                {/* Open */}
+                <Image
+                  src={"/assets/icons/icons8-open.svg"}
+                  width={20}
+                  height={20}
+                />
+              </>
+            )}
           </button>
         </div>
         <div className="chat-messages">
@@ -57,14 +75,21 @@ const Chatbot = () => {
           ))}
         </div>
         {isOpen && (
-          <div className="input-container">
+          <div className="flex mt-[-110px]">
             <input
               type="text"
-              placeholder="Type a message..."
+              placeholder="Search Prompt..."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              className="p-2 mx-[-53px] my-2 group transform translate-y-1 transition-transform duration-300  border-2 focus:border-orange-700 hover:border-orange-700 focus:outline-none drop-shadow-md hover:drop-shadow-xl border-orange-400 rounded-md"
             />
-            <button onClick={handleSendMessage}>Send</button>
+            <Image
+              className="bg-orange-600 rounded-full w-10 h-10 mt-[14px] ml-[63px] drop-shadow-xl cursor-pointer hover:bg-orange-700 p-[4px]"
+              src={"/assets/icons/send-svgrepo-com.svg"}
+              width={30}
+              height={30}
+              onClick={handleSendMessage}
+            />
           </div>
         )}
       </div>
